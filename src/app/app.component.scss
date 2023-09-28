@@ -70,10 +70,7 @@ button{
   width: 10rem;
   height: 5rem;
   font-size: 2rem;
+  &:hover{
+    background-color: invert($color: $button-background-color);
+    color: invert($color: $button-text-color);}
 }
-
-button:hover{
-  background-color: invert($color: $button-background-color);
-  color: invert($color: $button-text-color);
-}
-

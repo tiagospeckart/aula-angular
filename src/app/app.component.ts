@@ -1,10 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'novo';
+export class AppComponent implements OnInit {
+  ngOnInit(): void {
+    console.log("Hello World")
+  }
+  title='novo';
+
+  function(): void{
+
+  }
 }
