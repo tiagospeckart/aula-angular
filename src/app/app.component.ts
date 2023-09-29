@@ -39,13 +39,13 @@ export class AppComponent implements OnInit {
   calculateAverage(numbers: number[]): void {
     const sum = numbers.reduce((acc, val) => acc + val, 0);
     const average = sum / numbers.length;
-    console.log(`The average is ${average}`);
+    console.log(`The average of ${numbers} is ${average}`);
   }
 
   verifyString(text: string): void {
     const length = text.length;
     const comparison = text === "devs2blu" ? "equal" : "different";
-    console.log(`The text has ${length} characters and is ${comparison} to "devs2blu".`);
+    console.log(`The text "${text}" has ${length} characters and is ${comparison} to "devs2blu".`);
   }
 
   calculateInterest(principal: number, rate: number, months: number): void {
@@ -64,6 +64,6 @@ export class AppComponent implements OnInit {
         consonantCount++;
       }
     }
-    console.log(`Number of vowels: ${vowelCount}, Number of consonants: ${consonantCount}`);
+    console.log(`Number of vowels of "${text}" is: ${vowelCount}, Number of consonants: ${consonantCount}`);
   }
 }
