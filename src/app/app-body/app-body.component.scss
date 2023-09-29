@@ -1,0 +1,29 @@
+$title-color: #3a0202;
+$background-color: bisque;
+$button-background-color: rgb(238, 182, 162);
+$button-text-color: #147a02;
+
+body {
+  background-color: $background-color;
+}
+
+h1 {
+  color: $title-color;
+  background-color: invert($title-color);
+}
+
+h3{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+button{
+  background-color: $button-background-color;
+  color: $button-text-color;
+  border-radius: 10%;
+  width: 10rem;
+  height: 5rem;
+  font-size: 2rem;
+  &:hover{
+    background-color: invert($color: $button-background-color);
+    color: invert($color: $button-text-color);}
+}

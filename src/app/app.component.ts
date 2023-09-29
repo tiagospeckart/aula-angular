@@ -10,7 +10,6 @@ export class AppComponent implements OnInit {
   private nome: string = 'John Doe';
   private arr1: number[] = [1, 2, 3];
   private arr2: number[] = [500, 100, 7, 378.32];
-  public title: string = 'Hello people';
 
   ngOnInit(): void {
     console.log("Hello World");
@@ -28,12 +27,6 @@ export class AppComponent implements OnInit {
     
     // Call to count vowels and consonants
     this.countVowelsConsonants("ExampleString");
-  }
-
-  // This function was renamed to avoid confusion with the keyword 'function'
-  logButtonClick(): void {
-    const CLICKED_BUTTON: string = 'Clicked button';
-    console.log(CLICKED_BUTTON);
   }
 
   calculateAverage(numbers: number[]): void {
