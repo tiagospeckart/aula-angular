@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   public title: string = 'Header';
+  public btnInicio: string = 'Inicio';
+  public btnCadastrar: string = 'Cadastrar produto';
 }

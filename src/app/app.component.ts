@@ -7,7 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   // If the attribute is private, HTML can't access it
-  private nome: string = 'John Doe';
   private arr1: number[] = [1, 2, 3];
   private arr2: number[] = [500, 100, 7, 378.32];
 
