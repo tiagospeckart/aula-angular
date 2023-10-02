@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { RegisterProductRoutingModule } from './register-product-routing.module';
 import { RegisterProductComponent } from './register-product.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -11,7 +11,9 @@ import { RegisterProductComponent } from './register-product.component';
   ],
   imports: [
     CommonModule,
-    RegisterProductRoutingModule
+    RegisterProductRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class RegisterProductModule { }

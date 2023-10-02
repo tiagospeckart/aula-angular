@@ -1,1 +1,7 @@
-<p>register-product works!</p>
+<form [formGroup]="productForm">
+  <!-- formControlName === algum atributo construído para o formulário -->
+  <input type="text" formControlName = "title">
+  <input type="text" formControlName = "author">
+  <input type="text" formControlName = "year">
+  <input type="number" formControlName = "price" step=".01">
+</form>
