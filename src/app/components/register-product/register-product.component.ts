@@ -41,6 +41,10 @@ export class RegisterProductComponent implements OnInit {
     }
   }
 
+  changeShowState(){
+    this.show = !this.show;
+  }
+
   formatMoney(event: any) {
     const value = event.target.value;
     event.target.value = parseFloat(value).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,'); // Apply formatting
