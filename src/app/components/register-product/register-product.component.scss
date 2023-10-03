@@ -1,11 +1,27 @@
+/* 
+  Estilização para campos inválidos que foram tocados pelo usuário.
+  Aplica-se a elementos input, textarea e select.
+  A borda desses elementos será colorida de vermelho.
+*/
 input.ng-invalid.ng-touched,
 textarea.ng-invalid.ng-touched,
 select.ng-invalid.ng-touched {
   border-color: red;
 }
+
+/* 
+  Estilização para campos de texto que estão em foco.
+  A borda do elemento input será colorida de azul quando o usuário clicar ou tabular para ele.
+*/
 input[type="text"]:focus {
   border-color: blue;
 }
+
+/* 
+  Estilização específica para campos de texto que são inválidos e foram tocados pelo usuário.
+  A borda do elemento input será colorida de vermelho.
+  Note que esta regra é redundante se considerarmos a primeira regra, mas é mais específica para campos de texto.
+*/
 input[type="text"].ng-invalid.ng-touched {
   border-color: red;
 }

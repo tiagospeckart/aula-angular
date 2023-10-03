@@ -11,6 +11,8 @@ export class RegisterProductComponent implements OnInit {
   public productForm: FormGroup;
   productTypes = Object.values(ProductType); // Assuming ProductType is correctly imported
 
+  public show: boolean = false;
+
   constructor(private fb: FormBuilder) {}
 
   ngOnInit(): void {

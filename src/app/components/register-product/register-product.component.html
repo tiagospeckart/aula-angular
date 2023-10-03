@@ -30,3 +30,8 @@
   
   <button type="submit" (click)="sendForm()" [disabled]="productForm.invalid">Save</button>
 </form>
+
+<!-- Omite ou mostra elementos (tags) do HTML conforme condição -->
+<!-- expression - sempre vai ser um atributo atribuido na classe -->
+<h5> Condição do meu ngIf: {{ show }}</h5>
+<h5 *ngIf="show == true"> Teste com ngIf</h5>
