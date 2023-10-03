@@ -1,7 +1,32 @@
 <form [formGroup]="productForm">
-  <!-- formControlName === algum atributo construído para o formulário -->
-  <input type="text" formControlName = "title">
-  <input type="text" formControlName = "author">
-  <input type="text" formControlName = "year">
-  <input type="number" formControlName = "price" step=".01">
+  <label for="name">Product Name</label>
+  <input id="name" type="text" formControlName="name" placeholder="Name" required>
+  
+  <label for="description">Description</label>
+  <input id="description" type="text" formControlName="description" placeholder="Description" required>
+  
+  <label for="code">Product Code</label>
+  <input id="code" type="text" formControlName="code" placeholder="Code" required>
+
+  <label for="costPrice">Cost Price</label>
+  <input id="costPrice" type="text" formControlName="costPrice" placeholder="$0.00"
+  (blur)="formatMoney($event)" (focus)="unformatMoney($event)">
+  
+  <label for="salePrice">Sale Price</label>
+  <input id="salePrice" type="text" formControlName="salePrice" placeholder="$0.00"
+  (blur)="formatMoney($event)" (focus)="unformatMoney($event)">
+  
+  <label for="preparationTime">Preparation Time (in minutes)</label>
+  <input id="preparationTime" type="text" formControlName="preparationTime" placeholder="00">
+  
+  <label for="productType">Product Type</label>
+  <select id="productType" formControlName="productType">
+    <option value="" disabled selected>Select a product type</option>
+    <option *ngFor="let type of productTypes" [value]="type">{{ type }}</option>
+  </select>
+  
+  <label for="comments">Comments</label>
+  <textarea id="comments" formControlName="comments" placeholder="Comments"></textarea>
+  
+  <button type="submit" (click)="sendForm()" [disabled]="productForm.invalid">Save</button>
 </form>

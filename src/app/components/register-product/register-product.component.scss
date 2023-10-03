@@ -1,0 +1,11 @@
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched,
+select.ng-invalid.ng-touched {
+  border-color: red;
+}
+input[type="text"]:focus {
+  border-color: blue;
+}
+input[type="text"].ng-invalid.ng-touched {
+  border-color: red;
+}
